@@ -7,7 +7,7 @@ header {
 }
 
 header img {
-    width: 15em;
+    width: 17.5em;
 }
 
 h1 {
@@ -26,16 +26,14 @@ header i {
     position: relative;
 }
 
-header i::after {
-    content: '';
-    position: absolute;
-    top: 0.45em;
-    width: 3.5em;
-    height: 0.15em;
+header hr {
+    display: inline-block;
+    width: 6em;
+    height: 0.2em;
+    transform: translateY(-7px);
     margin: 0 1em;
     border-radius: 1em;
     background-color: white;
-
 }
 
 header p {
