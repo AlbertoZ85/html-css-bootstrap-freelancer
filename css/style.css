@@ -1,11 +1,17 @@
-header, section#about {
+/* STILI GENERALI */
+.az_bg-green {
     background-color: #1abc9c;
     color: white;
 }
 
-header, section {
-    padding-top: 3em;
-    padding-bottom: 3em;
+#portfolio, #contact {
+    background-color: white;
+    color: #2c3e50;
+}
+
+section {
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 h1 {
@@ -14,22 +20,38 @@ h1 {
 }
 
 h2 {
-    font-size: 2.25em;
+    font-size: 2.75em;
     font-weight: 700;
 }
 
-hr {
-    display: inline-block;
-    width: 100%;
-    max-width: 6em;
-    height: 3.5px;
-    transform: translateY(-12px);
-    margin: 0 0.5em;
-    border-radius: 1em;
+.fa-star {
+    font-size: 2.75rem;
+    margin: 0 1rem;
 }
 
-i {
-    font-size: 2.5em;
+.az_star::before,
+.az_star::after {
+  content: '';
+  width: 18%;
+  height: 3.5px;
+  border-radius: 1px;
+  display: inline-block;
+  position: relative;
+  bottom: 10px;
+}
+
+#banner .az_star::before,
+#banner .az_star::after,
+#about .az_star::before,
+#about .az_star::after {
+    background-color: white;
+}
+
+#portfolio .az_star::before,
+#portfolio .az_star::after,
+#contact .az_star::before,
+#contact .az_star::after {
+    background-color: #2c3e50;
 }
 
 p {
@@ -37,39 +59,115 @@ p {
     margin-bottom: 1em;
 }
 
-/* HEADER */
-header img {
-    width: 100%;
-    max-width: 22.5em;
-}
-
-.star-hr {
+.az_star {
     margin: 20px 0;
 }
 
-header hr, section#about hr {
+/* NAVBAR */
+.az_navbar {
+    background-color: #2c3e50;
+    font-weight: 700;
+    border: none;
+    padding: 1em 0;
+}
+
+.az_navbar a.navbar-brand,
+.az_navbar .nav li a {
+    color: white;
+}
+
+.az_navbar .nav li a:hover {
+    color: #1abc9c;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
     background-color: white;
+    width: 12.5px;
+    height: 0.15em;
+}
+
+.navbar-toggle .icon-bar + .icon-bar {
+    margin-top: 2px;
+}
+
+.navbar-default .navbar-toggle {
+    border: none;
+}
+
+.navbar-default .navbar-toggle:hover {
+    background-color: #148f77;
+}
+
+.navbar-default .navbar-brand:hover {
+    color: white;
+}
+
+.navbar-header button::before {
+    content: 'MENU';
+    display: inline-block;
+    color: white;
+}
+
+.az_hamburger {
+    display: inline-block;
+}
+
+.navbar-header button {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0.8em;
+    border-radius: 0.5em;
+    line-height: 25px;
+    background-color: #1abc9c;
+}
+
+/* BANNER */
+#banner {
+    margin-top: 50px;
+    padding-top: calc(50px + 74px);
+}
+
+#banner img {
+    width: 100%;
+    max-width: 15em;
 }
 
 /* PORTFOLIO */
-#portfolio {
-    background-color: white;
+.az_portfolio-img {
+    position: relative;
 }
 
-#portfolio hr {
-    background-color: #2c3e50;
+.az_portfolio-overlay {
+    display: none;
+}
+
+.az_portfolio-img:hover .az_portfolio-overlay {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 188, 156, 0.9);
+}
+
+.az_portfolio-overlay span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 70px;
+  color: white;
 }
 
 #portfolio img {
     width: 100%;
-    max-width: 400px;
+    /* max-width: 400px; */
     margin-top: 15px;
     margin-bottom: 15px;
 }
 
 /* ABOUT */
 #about p {
-    padding: 0 40px;
+    /* padding: 0 40px; */
 }
 
 #about .m-download {
@@ -90,9 +188,32 @@ header hr, section#about hr {
     font-size: 1em;
 }
 
-/* MEDIA QUERIES */
-@media screen and (min-width: 576px) {
-    .container {
-        max-width: 540px;
-    }
+/* CONTACT - FORM */
+.form-group:not(:last-child) {
+    border-bottom: 1px solid #e9ecef;
+    padding: 25px 0;
+}
+
+.form-control {
+    padding-left: 0;
+    padding-right: 0;
+    font-size: 1.5em;
+    color: #2c3e50;
+}
+
+.borderless {
+    border: none;
+    box-shadow: none;
+}
+
+#send-message-btn {
+    padding: 1em 1.75em;
+    font-size: 1.25em;
+    border-radius: 0.5em;
+    border: none;
+    background-color: #1abc9c;
+}
+
+#send-message-btn:hover {
+    background-color: #148f77;
 }
