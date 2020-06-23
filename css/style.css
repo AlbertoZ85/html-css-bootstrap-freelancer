@@ -9,7 +9,12 @@
     color: #2c3e50;
 }
 
-section {
+#footer {
+    background-color: #2c3e50;
+    color: white;
+}
+
+section, #footer {
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -22,6 +27,12 @@ h1 {
 h2 {
     font-size: 2.75em;
     font-weight: 700;
+}
+
+h4 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 1em;
 }
 
 .fa-star {
@@ -166,10 +177,6 @@ p {
 }
 
 /* ABOUT */
-#about p {
-    /* padding: 0 40px; */
-}
-
 #about .m-download {
     margin-top: 1.5em;
 }
@@ -216,4 +223,45 @@ p {
 
 #send-message-btn:hover {
     background-color: #148f77;
+}
+
+/* FOOTER */
+#footer .m-foot {
+    margin-bottom: 3em;
+}
+
+#footer p {
+    margin: 0;
+}
+
+.btn-social {
+    width: 2.5em;
+    height: 2.5em;
+    font-size: 20px;
+    line-height: 1.75;
+    margin: 0 0.2em;
+    color: white;
+    border: 2px solid white;
+    border-radius: 100%;
+}
+
+.btn-social:hover {
+    color: #212529;
+    background-color: white;
+}
+
+#footer p a {
+    color: #1abc9c;
+}
+
+#footer p a:hover {
+    color: #117964;
+}
+
+/* COPYRIGHT */
+.az_copyright {
+    background-color: #1a252f;
+    color: white;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
 }
